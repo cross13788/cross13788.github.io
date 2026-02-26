@@ -216,6 +216,13 @@ h2::after {
     border: 1px solid var(--border);
 }
 
+.about-photo img[src$="headshot.jpg"] {
+    /* Placeholder styling until a real headshot is added */
+    min-height: 320px;
+    object-fit: cover;
+    background: var(--bg-card);
+}
+
 .about-text p {
     margin-bottom: 16px;
     color: var(--text-secondary);
