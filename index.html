@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Ross — Theoretical &amp; Computational Nuclear Physicist</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="navbar">
+    <div class="nav-container">
+        <a href="#hero" class="nav-name">Christian Ross</a>
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#software">Software</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Christian Ross</h1>
+        <p class="hero-subtitle">Theoretical &amp; Computational Nuclear Physicist</p>
+        <p class="hero-affiliation">Ph.D. Candidate &middot; Vanderbilt University</p>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about">
+    <div class="container">
+        <h2>About</h2>
+        <div class="about-grid">
+            <div class="about-photo">
+                <img src="images/general_physics_image.jpg" alt="Physics visualization">
+            </div>
+            <div class="about-text">
+                <p>I am a Ph.D. candidate in theoretical nuclear physics at Vanderbilt University, working under the supervision of Dr. A. S. Umar. My research sits at the intersection of <strong>many-body quantum theory</strong> and <strong>high-performance computing</strong>, developing and applying advanced numerical methods to solve fundamental problems in nuclear structure and reactions.</p>
+                <p>My work spans time-dependent density functional theory, relativistic quantum mechanics, and large-scale scientific software development in Fortran, C/C++, and Python. I am passionate about using computational tools to connect theoretical models with experimental data and push the boundaries of what is calculable in nuclear physics.</p>
+                <div class="about-details">
+                    <div><strong>Education</strong></div>
+                    <div>Ph.D. Theoretical Nuclear Physics, Vanderbilt University (Expected Fall 2026)</div>
+                    <div>M.S. Physics, Vanderbilt University (2023)</div>
+                    <div>B.S. Physics, Kent State University (2019)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Research -->
+<section id="research">
+    <div class="container">
+        <h2>Research</h2>
+        <p class="section-intro">My research develops and advances nuclear many-body models using many-body quantum theory, time-dependent density functional theory, electromagnetic theory, and relativistic quantum field theory.</p>
+        <div class="research-grid">
+            <div class="research-card">
+                <h3>Muon-Induced Fission</h3>
+                <p>Studying muon-induced fission of actinide nuclei by solving the time-dependent Dirac equation, probing the underlying dynamics of nuclear fission through a novel electromagnetic mechanism.</p>
+            </div>
+            <div class="research-card">
+                <h3>Relativistic Quantum Mechanics on 3D Grids</h3>
+                <p>Numerical solution of the 4-component Dirac equation with electromagnetic interactions on 3D Cartesian grids, enabling first-principles calculations of muonic atom dynamics.</p>
+            </div>
+            <div class="research-card">
+                <h3>Nucleon Transfer in Fusion</h3>
+                <p>Investigating nucleon transfer mechanisms and the role of isospin composition in low-energy nuclear fusion reactions using time-dependent Hartree-Fock theory.</p>
+            </div>
+            <div class="research-card">
+                <h3>Pairing Dynamics &amp; BCS Theory</h3>
+                <p>Implementing time-dependent BCS pairing dynamics within the Cb-TDHFB framework to capture superfluidity effects in nuclear collisions.</p>
+            </div>
+            <div class="research-card">
+                <h3>Superheavy Element Synthesis</h3>
+                <p>Studying quasifission dynamics and the determination of fission and quasifission fragment properties relevant to the synthesis of superheavy elements.</p>
+            </div>
+        </div>
+        <div class="equations-decoration">
+            <img src="images/website_equations.png" alt="Nuclear physics equations">
+        </div>
+    </div>
+</section>
+
+<!-- Software -->
+<section id="software">
+    <div class="container">
+        <h2>Software</h2>
+        <p class="section-intro">I design and implement high-performance numerical software for nuclear physics, connecting theoretical models with experimental data.</p>
+        <div class="software-grid">
+            <div class="software-card">
+                <h3>muon_fission_v2</h3>
+                <p class="software-label">Muon-Induced Fission Simulator</p>
+                <p>Fortran 90 code solving the time-dependent Dirac equation for muonic atoms in fissioning actinide nuclei. Features 4-component spinor evolution on 3D grids with FFT-based Coulomb solver and OpenMP parallelization.</p>
+                <div class="software-tech">
+                    <span>Fortran 90</span>
+                    <span>OpenMP</span>
+                    <span>FFTW3</span>
+                </div>
+                <a href="#" class="software-link">GitHub (coming soon)</a>
+            </div>
+            <div class="software-card">
+                <h3>TDHFBCS_v2</h3>
+                <p class="software-label">Time-Dependent Hartree-Fock-BCS</p>
+                <p>Ground-up modernization of a legacy nuclear physics production code. Modular Fortran 90 architecture with section-based input system, checkpoint/restart capability, and automated build system.</p>
+                <div class="software-tech">
+                    <span>Fortran 90</span>
+                    <span>OpenMP</span>
+                    <span>LAPACK</span>
+                </div>
+                <a href="#" class="software-link">GitHub (coming soon)</a>
+            </div>
+            <div class="software-card">
+                <h3>tdhf-3d</h3>
+                <p class="software-label">Legacy TDHF-BCS Maintenance</p>
+                <p>Ongoing maintenance and extension of the production VU-TDHF3D code used in published nuclear fusion and fission research.</p>
+                <div class="software-tech">
+                    <span>Fortran</span>
+                    <span>MPI</span>
+                    <span>HPC</span>
+                </div>
+                <a href="#" class="software-link">GitHub (coming soon)</a>
+            </div>
+            <div class="software-card">
+                <h3>HFB Solver</h3>
+                <p class="software-label">Hartree-Fock-Bogoliubov Solver</p>
+                <p>Static HFB code for improved nuclear structure calculations with full pairing correlations. Currently in active development.</p>
+                <div class="software-tech">
+                    <span>Fortran 90</span>
+                    <span>BLAS</span>
+                    <span>Intel MKL</span>
+                </div>
+                <a href="#" class="software-link">In Development</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Publications -->
+<section id="publications">
+    <div class="container">
+        <h2>Publications &amp; Talks</h2>
+
+        <h3 class="pub-category">Physical Review C</h3>
+        <ul class="pub-list">
+            <li>
+                <a href="https://doi.org/10.1103/5lcf-6qr5" target="_blank" rel="noopener">Muon-induced fission as a probe of the underlying dynamics in nuclear fission</a>
+                <span class="pub-authors">Christian Ross and A. S. Umar</span>
+                <span class="pub-journal">Phys. Rev. C 112, L011601 (2025)</span>
+            </li>
+            <li>
+                <a href="https://doi.org/10.1103/PhysRevC.110.L041601" target="_blank" rel="noopener">Isospin composition of fission barriers</a>
+                <span class="pub-authors">Kyle Godbey, Christian Ross, and A. S. Umar</span>
+                <span class="pub-journal">Phys. Rev. C 110, L041601 (2024)</span>
+            </li>
+            <li>
+                <a href="https://doi.org/10.1103/PhysRevC.108.L051602" target="_blank" rel="noopener">Role of isospin composition in low-energy nuclear fusion</a>
+                <span class="pub-authors">Richard Gumbel, Christian Ross, and A. S. Umar</span>
+                <span class="pub-journal">Phys. Rev. C 108, L051602 (2023) — Editors' Suggestion</span>
+            </li>
+        </ul>
+
+        <h3 class="pub-category">Selected Talks</h3>
+        <ul class="pub-list talks">
+            <li>
+                <strong>Muon-Induced Fission as a Probe of the Underlying Dynamics in Nuclear Fission</strong>
+                <span class="pub-journal">2025 APS Global Summit, March 2025</span>
+            </li>
+            <li>
+                <strong>Role of Isospin Composition in Low-Energy Nuclear Fusion</strong>
+                <span class="pub-journal">APS Division of Nuclear Physics Fall Meeting, October 2024</span>
+            </li>
+            <li>
+                <strong>Role of Isospin Composition in Low-Energy Nuclear Fusion</strong>
+                <span class="pub-journal">APS Meeting Sacramento, April 2024</span>
+            </li>
+        </ul>
+
+        <h3 class="pub-category">In the News</h3>
+        <ul class="pub-list">
+            <li>
+                <a href="https://www.energy.gov/science/np/articles/new-insights-role-nucleon-exchange-nuclear-fusion" target="_blank" rel="noopener">New Insights on the Role of Nucleon Exchange in Nuclear Fusion</a>
+                <span class="pub-journal">U.S. Department of Energy, Office of Science Feature</span>
+            </li>
+        </ul>
+
+        <h3 class="pub-category">Awards</h3>
+        <ul class="pub-list awards">
+            <li>Most Outstanding Graduate Student Publication — Vanderbilt University (2025)</li>
+            <li>Robert T. Lagemann Award — Vanderbilt University (2022)</li>
+            <li>Physics Academic Achievement Award — Kent State University (2020)</li>
+            <li>Pearson Award in Physics — Kent State University (2019)</li>
+            <li>Center for Nuclear Research Award — Kent State University (2018)</li>
+            <li>Summer Undergraduate Research Experience Award — Kent State University (2018)</li>
+            <li>John Wiley Award in Physics — Kent State University (2018)</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <a href="mailto:christian.ross@vanderbilt.edu">christian.ross@vanderbilt.edu</a>
+                </div>
+                <div class="contact-item">
+                    <h3>Office</h3>
+                    <p>17th and Horton Building<br>
+                    2001 Grand Ave<br>
+                    Nashville, TN 37212</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Advisor</h3>
+                    <p>Dr. A. S. Umar</p>
+                </div>
+            </div>
+            <div class="contact-links">
+                <a href="#" class="contact-btn">GitHub (coming soon)</a>
+                <a href="#" class="contact-btn">LinkedIn (coming soon)</a>
+            </div>
+        </div>
+        <div class="affiliations">
+            <p>Member, American Physical Society &middot; Member, FRIB Theory Alliance</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Christian Ross. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
