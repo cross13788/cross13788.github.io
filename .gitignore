@@ -1,0 +1,7 @@
+# Large/backup images
+images/headshot_original.jpg
+images/general_physics_image.jpg
+
+# OS files
+.DS_Store
+Thumbs.db
