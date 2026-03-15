@@ -92,7 +92,7 @@
 <section id="software">
     <div class="container">
         <h2>Software</h2>
-        <p class="section-intro">I design and implement high-performance numerical software for nuclear physics, connecting theoretical models with experimental data.</p>
+        <p class="section-intro">I design and implement high-performance numerical software for nuclear physics and quantum field theory, connecting theoretical models with experimental data. Recent work includes continuum QFT solvers using functional methods (Dyson-Schwinger and Bethe-Salpeter equations) to investigate the Standard Model, with future applications to beyond-Standard-Model physics.</p>
         <div class="software-grid">
             <div class="software-card">
                 <h3>muon_fission_v3</h3>
@@ -152,6 +152,36 @@
                     <span>OpenMP</span>
                 </div>
                 <a href="https://github.com/cross13788/Lattice_QCD_v1" target="_blank" rel="noopener" class="software-link">Source available upon request</a>
+            </div>
+            <div class="software-card">
+                <h3>Functional_QCD_v1</h3>
+                <p class="software-label">Nonperturbative QCD via DSE/BSE</p>
+                <p>Continuum QCD solver implementing Dyson-Schwinger equations for quark and ghost propagators, Bethe-Salpeter equations for meson spectroscopy, and Faddeev equations for baryon bound states. Supports Ball-Chiu vertex corrections and multiple gluon interaction models.</p>
+                <div class="software-tech">
+                    <span>C++</span>
+                    <span>OpenMP</span>
+                </div>
+                <a href="https://github.com/cross13788/Functional_QCD_v1" target="_blank" rel="noopener" class="software-link">Source available upon request</a>
+            </div>
+            <div class="software-card">
+                <h3>Electroweak_Numerical_v1</h3>
+                <p class="software-label">Electroweak DSE Solver</p>
+                <p>Continuum Dyson-Schwinger equation solver for the full electroweak sector, SU(2)<sub>L</sub> &times; U(1)<sub>Y</sub>. Computes self-consistent fermion and gauge boson propagators with chiral (left/right) dressing functions and evaluates precision observables (S, T, U parameters).</p>
+                <div class="software-tech">
+                    <span>C++</span>
+                    <span>OpenMP</span>
+                </div>
+                <a href="https://github.com/cross13788/Electroweak_Numerical_v1" target="_blank" rel="noopener" class="software-link">Source available upon request</a>
+            </div>
+            <div class="software-card">
+                <h3>Minkowski_QED_v1</h3>
+                <p class="software-label">Minkowski-Space QED Solver</p>
+                <p>QED solver working directly in Minkowski space using the spectral (Nakanishi) representation for fermion propagators. Implements spectral DSE with vacuum polarization, coupled fermion-photon iterations, and a prototype physics-informed neural network solver.</p>
+                <div class="software-tech">
+                    <span>C++</span>
+                    <span>OpenMP</span>
+                </div>
+                <a href="https://github.com/cross13788/Minkowski_QED_v1" target="_blank" rel="noopener" class="software-link">Source available upon request</a>
             </div>
         </div>
     </div>
