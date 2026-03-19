@@ -99,7 +99,7 @@
         <p class="section-intro">I design and implement high-performance computational codes for nuclear physics, specializing in the large-scale simulation of fission, fusion, and quasifission dynamics using time-dependent density functional theory and relativistic quantum mechanics on 3D grids. More recently, I have turned my attention to the Standard Model and beyond-Standard-Model physics, developing continuum QFT solvers based on functional methods (Dyson-Schwinger and Bethe-Salpeter equations) and lattice QCD.</p>
         <div class="software-grid">
             <div class="software-card">
-                <h3>muon_fission_v3</h3>
+                <h3>muon_fission</h3>
                 <p class="software-label">Muon-Induced Fission Simulator</p>
                 <p>Fortran 90 code solving the time-dependent Dirac equation for muonic atoms in fissioning actinide nuclei. Features 4-component spinor evolution on 3D grids with FFT-based Coulomb solver. Includes both CPU (OpenMP) and GPU-accelerated (CUDA Fortran) versions.</p>
                 <div class="software-tech">
@@ -116,7 +116,7 @@
                 </div>
             </div>
             <div class="software-card">
-                <h3>TDHFBCS_v3</h3>
+                <h3>TDHFBCS</h3>
                 <p class="software-label">Time-Dependent Hartree-Fock-BCS</p>
                 <p>A modern nuclear physics production code for studying low-energy nuclear reactions, including fission, fusion, and quasifission dynamics. Written in Fortran 90 with both CPU (OpenMP) and GPU-accelerated (CUDA Fortran) versions.</p>
                 <div class="software-tech">
@@ -146,69 +146,104 @@
                 </div>
             </div>
             <div class="software-card">
-                <h3>HFB_v1</h3>
+                <h3>ChEFT</h3>
+                <p class="software-label">Chiral Effective Field Theory NN Potentials</p>
+                <p>Chiral EFT nucleon-nucleon potential calculator computing scattering phase shifts, deuteron binding, SRG-evolved interactions, nuclear matter equation of state, and Skyrme energy density functional parameters via density matrix expansion. Includes both CPU (OpenMP) and GPU-accelerated (CUDA Fortran) versions.</p>
+                <div class="software-tech">
+                    <span>Fortran 90</span>
+                    <span>CUDA Fortran</span>
+                    <span>OpenMP</span>
+                    <span>Intel MKL</span>
+                    <span>LAPACK</span>
+                    <span>cuBLAS</span>
+                    <span>cuSOLVER</span>
+                    <span>Python</span>
+                    <span>HPC</span>
+                </div>
+            </div>
+            <div class="software-card">
+                <h3>HFB_3D_Cartesian</h3>
                 <p class="software-label">Hartree-Fock-Bogoliubov Solver</p>
-                <p>Static HFB ground-state solver using the canonical-basis formulation with self-consistent pairing correlations. Implements the full Skyrme energy density functional with density-dependent contact pairing on 3D Cartesian grids.</p>
+                <p>Static HFB ground-state solver using the canonical-basis formulation with self-consistent pairing correlations. Implements the full Skyrme energy density functional with density-dependent contact pairing on 3D Cartesian grids. Includes both CPU (OpenMP) and GPU-accelerated (CUDA Fortran) versions.</p>
                 <div class="software-tech">
                     <span>Fortran 90</span>
+                    <span>CUDA Fortran</span>
                     <span>OpenMP</span>
                     <span>FFTW3</span>
                     <span>Intel MKL</span>
                     <span>LAPACK</span>
+                    <span>cuFFT</span>
+                    <span>cuBLAS</span>
+                    <span>cuSOLVER</span>
                     <span>Python</span>
+                    <span>HPC</span>
                 </div>
             </div>
             <div class="software-card">
-                <h3>HFB_v2</h3>
+                <h3>HFB_3D_HO</h3>
                 <p class="software-label">HFB Solver — Harmonic Oscillator Basis</p>
-                <p>Skyrme HFB solver using a Cartesian deformed harmonic oscillator basis with Gogny D1S finite-range pairing. Supports constrained HFB (quadrupole/octupole) via augmented Lagrangian method. Complements HFB_v1 with a basis-expansion approach for deformed nuclei.</p>
+                <p>Skyrme HFB solver using a Cartesian deformed harmonic oscillator basis with Gogny D1S finite-range pairing. Supports constrained HFB (quadrupole/octupole) via augmented Lagrangian method. Complements HFB_3D_Cartesian with a basis-expansion approach for deformed nuclei. Includes both CPU (OpenMP) and GPU-accelerated (CUDA Fortran) versions.</p>
                 <div class="software-tech">
                     <span>Fortran 90</span>
+                    <span>CUDA Fortran</span>
                     <span>OpenMP</span>
                     <span>FFTW3</span>
                     <span>Intel MKL</span>
                     <span>LAPACK</span>
+                    <span>cuBLAS</span>
+                    <span>cuSOLVER</span>
                     <span>Python</span>
+                    <span>HPC</span>
                 </div>
             </div>
             <div class="software-card">
-                <h3>Lattice_QCD_v1</h3>
+                <h3>Lattice_QCD</h3>
                 <p class="software-label">QCD on the Lattice</p>
-                <p>Lattice QCD simulation code implementing the Wilson gauge action with quenched and dynamical fermion support. Features SU(3) heat bath updates, Wilson fermion propagators with CG/BiCGstab solvers, and Hybrid Monte Carlo for full QCD.</p>
+                <p>Lattice QCD simulation code implementing the Wilson gauge action with quenched and dynamical fermion support. Features SU(3) heat bath updates, Wilson fermion propagators with CG/BiCGstab solvers, and Hybrid Monte Carlo for full QCD. Includes both CPU (OpenMP) and GPU-accelerated (CUDA C++) versions.</p>
                 <div class="software-tech">
                     <span>C++</span>
+                    <span>CUDA</span>
                     <span>OpenMP</span>
+                    <span>cuRAND</span>
                     <span>Python</span>
+                    <span>HPC</span>
                 </div>
             </div>
             <div class="software-card">
-                <h3>Functional_QCD_v1</h3>
+                <h3>Functional_QCD</h3>
                 <p class="software-label">Nonperturbative QCD via DSE/BSE</p>
-                <p>Continuum QCD solver implementing Dyson-Schwinger equations for quark and ghost propagators, Bethe-Salpeter equations for meson spectroscopy, and Faddeev equations for baryon bound states. Supports Ball-Chiu vertex corrections and multiple gluon interaction models.</p>
+                <p>Continuum QCD solver implementing Dyson-Schwinger equations for quark and ghost propagators, Bethe-Salpeter equations for meson spectroscopy, and Faddeev equations for baryon bound states. Supports Ball-Chiu vertex corrections and multiple gluon interaction models. Includes both CPU (OpenMP) and GPU-accelerated (CUDA C++) versions.</p>
                 <div class="software-tech">
                     <span>C++</span>
+                    <span>CUDA</span>
                     <span>OpenMP</span>
+                    <span>cuBLAS</span>
                     <span>Python</span>
+                    <span>HPC</span>
                 </div>
             </div>
             <div class="software-card">
-                <h3>Electroweak_Numerical_v1</h3>
+                <h3>Electroweak_Numerical</h3>
                 <p class="software-label">Electroweak DSE Solver</p>
-                <p>Continuum Dyson-Schwinger equation solver for the full electroweak sector, SU(2)<sub>L</sub> &times; U(1)<sub>Y</sub>. Computes self-consistent fermion and gauge boson propagators with chiral (left/right) dressing functions and evaluates precision observables (S, T, U parameters).</p>
+                <p>Continuum Dyson-Schwinger equation solver for the full electroweak sector, SU(2)<sub>L</sub> &times; U(1)<sub>Y</sub>. Computes self-consistent fermion and gauge boson propagators with chiral (left/right) dressing functions and evaluates precision observables (S, T, U parameters). Includes both CPU (OpenMP) and GPU-accelerated (CUDA C++) versions.</p>
                 <div class="software-tech">
                     <span>C++</span>
+                    <span>CUDA</span>
                     <span>OpenMP</span>
                     <span>Python</span>
+                    <span>HPC</span>
                 </div>
             </div>
             <div class="software-card">
-                <h3>Minkowski_QED_v1</h3>
+                <h3>Minkowski_QED</h3>
                 <p class="software-label">Minkowski-Space QED Solver</p>
-                <p>QED solver working directly in Minkowski space using the spectral (Nakanishi) representation for fermion propagators. Implements spectral DSE with vacuum polarization, coupled fermion-photon iterations, and a prototype physics-informed neural network solver.</p>
+                <p>QED solver working directly in Minkowski space using the spectral (Nakanishi) representation for fermion propagators. Implements spectral DSE with vacuum polarization, coupled fermion-photon iterations, and a prototype physics-informed neural network solver. Includes both CPU (OpenMP) and GPU-accelerated (OpenACC) versions.</p>
                 <div class="software-tech">
                     <span>C++</span>
+                    <span>OpenACC</span>
                     <span>OpenMP</span>
                     <span>Python</span>
+                    <span>HPC</span>
                 </div>
             </div>
         </div>
