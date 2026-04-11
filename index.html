@@ -46,7 +46,7 @@
                 <p>My work spans relativistic quantum mechanics, large-scale scientific software development in Fortran, C/C++, and Python, and time-dependent density functional theory. Our research group utilizes computational tools to connect theoretical models with experimental data and push the frontier of what is calculable in nuclear physics. Beyond my thesis work, I have a strong interest in quantum field theory, in particular, quantum chromodynamics and lattice methods, which I am actively exploring through independent projects.</p>
                 <div class="about-details">
                     <div><strong>Education</strong></div>
-                    <div>Ph.D. Theoretical and Computational Nuclear Physics, Vanderbilt University (Expected Fall 2026)</div>
+                    <div>Ph.D. Theoretical and Computational Nuclear Physics, Vanderbilt University (Expected August 2026)</div>
                     <div>M.S. Physics, Vanderbilt University (2023)</div>
                     <div>B.S. Physics, Kent State University (2019)</div>
                 </div>
@@ -79,11 +79,7 @@
             </div>
             <div class="research-card">
                 <h3>Superheavy Element Synthesis</h3>
-                <p>Studying quasifission dynamics and the role of dynamic pairing correlations on shell effects in superheavy element production, including the determination of fission and quasifission fragment properties.</p>
-            </div>
-            <div class="research-card">
-                <h3>Nuclear Structure &amp; Energy Density Functionals</h3>
-                <p>Self-consistent Hartree-Fock-Bogoliubov calculations of nuclear ground states using Skyrme energy density functionals and finite-range pairing interactions, providing the static foundation for reaction dynamics.</p>
+                <p>Studying quasifission dynamics and the determination of fission and quasifission fragment properties relevant to the synthesis of superheavy elements.</p>
             </div>
         </div>
         <div class="equations-decoration">
@@ -96,7 +92,7 @@
 <section id="software">
     <div class="container">
         <h2>Software</h2>
-        <p class="section-intro">I design and implement high-performance computational codes for nuclear physics, specializing in the large-scale simulation of fission, fusion, and quasifission dynamics using time-dependent density functional theory and relativistic quantum mechanics on 3D grids. More recently, I have turned my attention to the Standard Model and beyond-Standard-Model physics, developing continuum QFT solvers based on functional methods (Dyson-Schwinger and Bethe-Salpeter equations) and lattice QCD.</p>
+        <p class="section-intro">I design and implement high-performance numerical software for nuclear physics and quantum field theory, connecting theoretical models with experimental data. Recent work includes continuum QFT solvers using functional methods (Dyson-Schwinger and Bethe-Salpeter equations) to investigate the Standard Model, with future applications to beyond-Standard-Model physics.</p>
         <div class="software-grid">
             <div class="software-card">
                 <h3>muon_fission</h3>
@@ -146,25 +142,9 @@
                 </div>
             </div>
             <div class="software-card">
-                <h3>ChEFT</h3>
-                <p class="software-label">Chiral Effective Field Theory NN Potentials</p>
-                <p>Chiral EFT nucleon-nucleon potential calculator computing scattering phase shifts, deuteron binding, SRG-evolved interactions, nuclear matter equation of state, and Skyrme energy density functional parameters via density matrix expansion. Includes both CPU (OpenMP) and GPU-accelerated (CUDA Fortran) versions.</p>
-                <div class="software-tech">
-                    <span>Fortran 90</span>
-                    <span>CUDA Fortran</span>
-                    <span>OpenMP</span>
-                    <span>Intel MKL</span>
-                    <span>LAPACK</span>
-                    <span>cuBLAS</span>
-                    <span>cuSOLVER</span>
-                    <span>Python</span>
-                    <span>HPC</span>
-                </div>
-            </div>
-            <div class="software-card">
-                <h3>HFB_3D_Cartesian</h3>
-                <p class="software-label">Hartree-Fock-Bogoliubov Solver</p>
-                <p>Static HFB ground-state solver using the canonical-basis formulation with self-consistent pairing correlations. Implements the full Skyrme energy density functional with density-dependent contact pairing on 3D Cartesian grids. Includes both CPU (OpenMP) and GPU-accelerated (CUDA Fortran) versions.</p>
+                <h3>HFB Solvers</h3>
+                <p class="software-label">Hartree-Fock-Bogoliubov Ground-State Solvers</p>
+                <p>A suite of three complementary HFB formulations implementing the Skyrme energy density functional with self-consistent pairing: <code>HFB_3D_Cartesian</code> (canonical-basis formulation on 3D Cartesian grids with density-dependent contact pairing), <code>HFB_3D_HO</code> (Cartesian deformed harmonic oscillator basis with Gogny D1S finite-range pairing and augmented Lagrangian constraints for quadrupole/octupole deformation), and <code>Axial_HFB</code> (axial-symmetric per-Omega diagonalization in cylindrical coordinates for systematic potential energy surface calculations). Grid-based and basis-expansion versions include both CPU (OpenMP) and GPU-accelerated (CUDA Fortran) implementations.</p>
                 <div class="software-tech">
                     <span>Fortran 90</span>
                     <span>CUDA Fortran</span>
@@ -180,79 +160,21 @@
                 </div>
             </div>
             <div class="software-card">
-                <h3>HFB_3D_HO</h3>
-                <p class="software-label">HFB Solver — Harmonic Oscillator Basis</p>
-                <p>Skyrme HFB solver using a Cartesian deformed harmonic oscillator basis with Gogny D1S finite-range pairing. Supports constrained HFB (quadrupole/octupole) via augmented Lagrangian method. Complements HFB_3D_Cartesian with a basis-expansion approach for deformed nuclei. Includes both CPU (OpenMP) and GPU-accelerated (CUDA Fortran) versions.</p>
+                <h3>Standard Model &amp; Nuclear Force Codes</h3>
+                <p class="software-label">QFT, QCD, and Chiral EFT Solvers</p>
+                <p>A collection of quantum field theory, quantum chromodynamics, and chiral EFT solvers spanning nuclear forces, lattice gauge theory, and nonperturbative continuum methods: <code>ChEFT</code> (chiral EFT nucleon-nucleon potentials with SRG evolution and density matrix expansion feeding Skyrme parameters back into the nuclear codes), <code>Lattice_QCD</code> (Wilson gauge and fermion action with HMC, CG/BiCGstab solvers, and meson spectroscopy), <code>Functional_QCD</code> (Dyson-Schwinger, Bethe-Salpeter, and Faddeev equations for quark propagators, mesons, and baryons), <code>Electroweak_Numerical</code> (continuum DSE solver for SU(2)<sub>L</sub> &times; U(1)<sub>Y</sub> with precision observables), and <code>Minkowski_QED</code> (Minkowski-space spectral DSE using the Nakanishi representation). All include both CPU (OpenMP) and GPU-accelerated (CUDA Fortran, CUDA C++, or OpenACC) versions.</p>
                 <div class="software-tech">
                     <span>Fortran 90</span>
+                    <span>C++</span>
                     <span>CUDA Fortran</span>
+                    <span>CUDA</span>
+                    <span>OpenACC</span>
                     <span>OpenMP</span>
-                    <span>FFTW3</span>
                     <span>Intel MKL</span>
                     <span>LAPACK</span>
                     <span>cuBLAS</span>
                     <span>cuSOLVER</span>
-                    <span>Python</span>
-                    <span>HPC</span>
-                </div>
-            </div>
-            <div class="software-card">
-                <h3>Axial_HFB</h3>
-                <p class="software-label">Axial HFB Solver (In Development)</p>
-                <p>Axial-symmetric Skyrme HFB solver with per-Omega diagonalization in cylindrical coordinate space. Imposing axial symmetry reduces the 3D HFB problem to independent 2D eigenvalue problems, enabling systematic potential energy surface calculations on desktop hardware.</p>
-                <div class="software-tech">
-                    <span>Fortran 90</span>
-                    <span>OpenMP</span>
-                    <span>Intel MKL</span>
-                    <span>LAPACK</span>
-                </div>
-            </div>
-            <div class="software-card">
-                <h3>Lattice_QCD</h3>
-                <p class="software-label">QCD on the Lattice</p>
-                <p>Lattice QCD simulation code implementing the Wilson gauge action with quenched and dynamical fermion support. Features SU(3) heat bath updates, Wilson fermion propagators with CG/BiCGstab solvers, and Hybrid Monte Carlo for full QCD. Includes both CPU (OpenMP) and GPU-accelerated (CUDA C++) versions.</p>
-                <div class="software-tech">
-                    <span>C++</span>
-                    <span>CUDA</span>
-                    <span>OpenMP</span>
                     <span>cuRAND</span>
-                    <span>Python</span>
-                    <span>HPC</span>
-                </div>
-            </div>
-            <div class="software-card">
-                <h3>Functional_QCD</h3>
-                <p class="software-label">Nonperturbative QCD via DSE/BSE</p>
-                <p>Continuum QCD solver implementing Dyson-Schwinger equations for quark and ghost propagators, Bethe-Salpeter equations for meson spectroscopy, and Faddeev equations for baryon bound states. Supports Ball-Chiu vertex corrections and multiple gluon interaction models. Includes both CPU (OpenMP) and GPU-accelerated (CUDA C++) versions.</p>
-                <div class="software-tech">
-                    <span>C++</span>
-                    <span>CUDA</span>
-                    <span>OpenMP</span>
-                    <span>cuBLAS</span>
-                    <span>Python</span>
-                    <span>HPC</span>
-                </div>
-            </div>
-            <div class="software-card">
-                <h3>Electroweak_Numerical</h3>
-                <p class="software-label">Electroweak DSE Solver</p>
-                <p>Continuum Dyson-Schwinger equation solver for the full electroweak sector, SU(2)<sub>L</sub> &times; U(1)<sub>Y</sub>. Computes self-consistent fermion and gauge boson propagators with chiral (left/right) dressing functions and evaluates precision observables (S, T, U parameters). Includes both CPU (OpenMP) and GPU-accelerated (CUDA C++) versions.</p>
-                <div class="software-tech">
-                    <span>C++</span>
-                    <span>CUDA</span>
-                    <span>OpenMP</span>
-                    <span>Python</span>
-                    <span>HPC</span>
-                </div>
-            </div>
-            <div class="software-card">
-                <h3>Minkowski_QED</h3>
-                <p class="software-label">Minkowski-Space QED Solver</p>
-                <p>QED solver working directly in Minkowski space using the spectral (Nakanishi) representation for fermion propagators. Implements spectral DSE with vacuum polarization, coupled fermion-photon iterations, and a prototype physics-informed neural network solver. Includes both CPU (OpenMP) and GPU-accelerated (OpenACC) versions.</p>
-                <div class="software-tech">
-                    <span>C++</span>
-                    <span>OpenACC</span>
-                    <span>OpenMP</span>
                     <span>Python</span>
                     <span>HPC</span>
                 </div>
@@ -288,18 +210,13 @@
         <h3 class="pub-category">In Preparation</h3>
         <ul class="pub-list">
             <li>
-                <span style="font-weight:500; font-size:0.98rem;">Muon-induced fission of actinide nuclei</span>
+                <span style="font-weight:500; font-size:0.98rem;">Role of pairing correlations in muon-induced fission</span>
                 <span class="pub-authors">Christian Ross and A. S. Umar</span>
                 <span class="pub-journal">In preparation (2026)</span>
             </li>
             <li>
                 <span style="font-weight:500; font-size:0.98rem;">Sensitivity of quasifission dynamics to the nuclear symmetry energy in <sup>48</sup>Ca + <sup>249</sup>Cf</span>
-                <span class="pub-authors">Christian Ross, Richard Gumbel, Kyle Godbey, and A. S. Umar</span>
-                <span class="pub-journal">In preparation (2026)</span>
-            </li>
-            <li>
-                <span style="font-weight:500; font-size:0.98rem;">Role of dynamic pairing correlations on shell effects in superheavy element production</span>
-                <span class="pub-authors">Christian Ross, Kyle Godbey, and A. S. Umar</span>
+                <span class="pub-authors">Christian Ross, Richard Gumbel, and A. S. Umar</span>
                 <span class="pub-journal">In preparation (2026)</span>
             </li>
         </ul>
